@@ -7,7 +7,7 @@
  * Licensed under the WTFPL (http://sam.zoy.org/wtfpl/)
  *
  * Requires jQuery http://jquery.com (1.2.6 at time of release)
- * Requires http://pajhome.org.uk/crypt/md5/md5.js
+ * Requires https://github.com/blueimp/JavaScript-MD5
  */
 
 (function($)
@@ -31,7 +31,7 @@
         var baseUrl = options.secure ? 'https://secure.gravatar.com/avatar/' : 'http://www.gravatar.com/avatar/';
 
         return $('<img src="' + baseUrl +
-            hex_md5(emailAddress) +
+            md5(emailAddress) +
             '.jpg?' +
             (options.size ? 's=' + options.size + '&' : '') +
             (options.rating ? 'r=' + options.rating + '&' : '') +
