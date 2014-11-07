@@ -32,7 +32,6 @@
 
     return $('<img src="' + baseUrl +
       md5(emailAddress) +
-      '.jpg?' +
       (options.size ? 's=' + options.size + '&' : '') +
       (options.rating ? 'r=' + options.rating + '&' : '') +
       (options.image ? 'd=' + encodeURIComponent(options.image) : '') +
