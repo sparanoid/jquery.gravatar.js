@@ -1,8 +1,13 @@
 /*
+ * jquery.gravatar.js 1.0.2 (2014-11-07)
+ * Maintained by Tunghsiao Liu
+ * http://sparanoid.com/
+ *
+ * Based on:
  * jQuery.gravatar 1.0.1 (2009-01-08)
  *
  * Written by Zach Leatherman
- * http://zachleat.com
+ * http://zachleat.com/
  *
  * Licensed under the WTFPL (http://sam.zoy.org/wtfpl/)
  *
@@ -32,7 +37,7 @@
       // - wavatar
       // - retro
       // - blank
-      image: 'mm',
+      default: 'mm',
 
       // If you're displaying Gravatars on a page that is being served over SSL (e.g. the page URL starts with HTTPS), then you'll want to serve your Gravatars via SSL as well, otherwise you'll get annoying security warnings in most browsers
       secure: true,
@@ -48,7 +53,7 @@
       '?' +
       (options.size ? 's=' + options.size + '&' : '') +
       (options.rating ? 'r=' + options.rating + '&' : '') +
-      (options.image ? 'd=' + encodeURIComponent(options.image) : '') +
+      (options.default ? 'd=' + encodeURIComponent(options.default) : '') +
       '"' +
       (options.classes ? ' class="' + options.classes + '"' : '') +
       '>').bind('error', function()
