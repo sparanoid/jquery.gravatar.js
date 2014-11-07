@@ -10,10 +10,10 @@
  * Requires https://github.com/blueimp/JavaScript-MD5
  */
 
-(function($)
-{
-  $.gravatar = function(emailAddress, overrides)
-  {
++function($) {
+
+  $.gravatar = function(emailAddress, overrides) {
+
     var options = $.extend({
       // By default, images are presented at 80px by 80px if no size parameter is supplied. You may request a specific image size, which will be dynamically delivered from Gravatar by using the `s=` or `size=` parameter and passing a single pixel dimension (since the images are square).
       // You may request images anywhere from 1px up to 2048px, however note that many users have lower resolution images, so requesting larger sizes may result in pixelation/low-quality images.
@@ -56,4 +56,4 @@
         $(this).remove();
       });
   };
-})(jQuery);
+}(jQuery);
