@@ -4,11 +4,15 @@
 
 Without options:
 
-    $('body').append($.gravatar('zachleatherman@gmail.com'));
+```javascript
+$('body').append($.gravatar('zachleatherman@gmail.com'));
+```
 
 With options:
 
-    $('body').append($.gravatar('t@sparanoid.com', {secure: false, rating: 'pg'}));
+```javascript
+$('body').append($.gravatar('t@sparanoid.com', {secure: false, rating: 'pg'}));
+```
 
 More complex example:
 
