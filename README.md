@@ -5,23 +5,33 @@
 Without options:
 
 ```javascript
-$('body').append($.gravatar('zachleatherman@gmail.com'));
+$(".gravatar").append($.gravatar("zachleatherman@gmail.com"));
 ```
 
 With options:
 
 ```javascript
-$('body').append($.gravatar('t@sparanoid.com', {secure: false, rating: 'pg'}));
+$(".gravatar").append($.gravatar("t@sparanoid.com", {secure: false, rating: "pg"}));
 ```
 
-More complex example:
+Initialize all `.gravatar` containers:
 
 ```javascript
-$(".user-gravatar").each(function() {
-  var gravatar = $(this).find(".user-gravatar-inner");
-  gravatar.empty().append($.gravatar(gravatar.data("gravatar-src"), {rating: "pg"}))
+$(".gravatar").each(function() {
+  gravatar.append($.gravatar(gravatar.data("gravatar-src"), {rating: "pg"}));
 });
-````
+```
+
+Pass image size from data attributes:
+
+```javascript
+$(".gravatar").each(function() {
+  var src = $(this).data("gravatar-src");
+  var size = $(this).data("gravatar-size");
+  if (!size) size = 60;
+  $(this).append($.gravatar(src, {size: size, rating: "pg"}));
+});
+```
 
 ## Options
 

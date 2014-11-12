@@ -56,8 +56,7 @@
       (options.default ? 'd=' + encodeURIComponent(options.default) : '') +
       '"' +
       (options.classes ? ' class="' + options.classes + '"' : '') +
-      '>').bind('error', function()
-      {
+      '>').bind('error', function() {
         $(this).remove();
       });
   };
